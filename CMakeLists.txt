@@ -7,12 +7,12 @@ set(CMAKE_CXX_VISIBILITY_PRESET hidden)
 project(pride VERSION 1.0.5)
 
 # Disable Geode's precompiled headers.
-set(GEODE_DISABLE_PRECOMPILED_HEADERS ON)
+## set(GEODE_DISABLE_PRECOMPILED_HEADERS ON)
 
 # Suppress annoying warning with overridden virtuals.
-if (CMAKE_CXX_COMPILER_ID MATCHES "Clang")
-    add_compile_options(-Wno-inconsistent-missing-override)
-endif()
+## if (CMAKE_CXX_COMPILER_ID MATCHES "Clang")
+##    add_compile_options(-Wno-inconsistent-missing-override)
+## endif()
 
 file(GLOB_RECURSE SOURCE_FILES src/**.cpp)
 add_library(${PROJECT_NAME} SHARED ${SOURCE_FILES})
